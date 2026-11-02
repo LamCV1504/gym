@@ -1,0 +1,20 @@
+{
+  "actions": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "viewMore": "Xem thêm",
+    "seeAnalysis": "Xem phân tích",
+    "start": "Bắt đầu",
+    "book": "Đặt chỗ"
+  },
+
+  "navigation": {
+    "home": "Trang chủ",
+    "workout": "Tập luyện",
+    "classes": "Lớp học",
+    "explore": "Khám phá",
+    "community": "Cộng đồng",
+    "membership": "Gói tập"
+  }
+}

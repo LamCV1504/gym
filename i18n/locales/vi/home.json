@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "goalProgress": {
+      "prefix": "Bạn đã đạt",
+      "suffix": "mục tiêu"
+    },
+    "motivations": {
+      "highProgress": [
+        "Bạn sắp đạt mục tiêu rồi! 🔥",
+        "Bạn đang tiến rất gần mục tiêu! 💪",
+        "Tuần này bạn đang có tiến bộ rất tốt! 🚀"
+      ],
+      "onTrack": [
+        "Bạn đang duy trì rất tốt! 💪",
+        "Cứ tiếp tục giữ nhịp này nhé! 🔥"
+      ],
+      "needsAttention": [
+        "Hãy quay lại đường đua nhé! ⚡",
+        "Mỗi buổi tập đều có giá trị. Hãy bắt đầu hôm nay! 💪"
+      ]
+    }
+  },
+  "analysis": {
+    "title": "Tình trạng hiện tại",
+    "weight": "Cân nặng",
+    "bmi": "BMI",
+    "bodyFat": "Mỡ cơ thể",
+    "weeklyChange": "tuần này",
+    "seeAnalysis": "Xem phân tích"
+  },
+  "streak": {
+    "title": "Chuỗi tập luyện",
+    "days": "{{count}} ngày"
+  },
+  "workout": {
+    "title": "Lịch tập hôm nay",
+    "empty": "Hôm nay chưa có lịch tập.",
+    "startWorkout": "Bắt đầu tập"
+  },
+  "recommendation": {
+    "title": "Đề xuất dành cho bạn",
+    "workout": "Bài tập đề xuất",
+    "class": "Lớp học đề xuất",
+    "promotion": "Ưu đãi đặc biệt"
+  }
+}
