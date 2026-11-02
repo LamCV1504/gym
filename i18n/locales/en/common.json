@@ -1,0 +1,20 @@
+{
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "viewMore": "View more",
+    "seeAnalysis": "See analysis",
+    "start": "Start",
+    "book": "Book"
+  },
+
+  "navigation": {
+    "home": "Home",
+    "workout": "Workout",
+    "classes": "Classes",
+    "explore": "Explore",
+    "community": "Community",
+    "membership": "Membership"
+  }
+}

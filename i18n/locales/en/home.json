@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "motivations": {
+      "highProgress": [
+        "You're almost there! 🔥",
+        "You're so close to your goal! Keep pushing! 💪",
+        "You're finishing strong! 🚀"
+      ],
+      "onTrack": [
+        "You're building great momentum! 💪",
+        "You're staying consistent. Keep it going! 🔥"
+      ],
+      "needsAttention": [
+        "Let's get back on track! ⚡",
+        "Every workout counts. Let's make today count! 💪"
+      ]
+    },
+
+    "goalProgress": {
+      "prefix": "You've reached",
+      "suffix": "of your goal"
+    }
+  },
+
+  "analysis": {
+    "title": "Your Current Condition",
+    "weight": "Weight",
+    "bmi": "BMI",
+    "bodyFat": "Body Fat",
+    "weeklyChange": "this week",
+    "seeAnalysis": "See full analysis"
+  },
+
+  "streak": {
+    "title": "Weekly Streak",
+    "days": "{{count}} days"
+  },
+
+  "workout": {
+    "title": "Your Workout Today",
+    "empty": "Nothing planned today.",
+    "startWorkout": "Start Workout"
+  },
+
+  "recommendation": {
+    "title": "Recommended For You",
+    "workout": "Recommended Workout",
+    "class": "Recommended Class",
+    "promotion": "Special Offer"
+  }
+}
