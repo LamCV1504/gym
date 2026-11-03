@@ -11,7 +11,7 @@ export default function ExplorePage() {
   const [selected, setSelected] = useState<Exercise | null>(null);
   const [keyword, setKeyword] = useState("");
 
-  const filtered = exercises.filter((e) =>
+  const filtered: Exercise[] = exercises.filter((e) =>
     e.name.toLowerCase().includes(keyword.toLowerCase())
   );
 

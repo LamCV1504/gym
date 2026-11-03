@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useProfileStore } from "../hooks/useProfile";
+import type { FitnessGoal } from "../typpe";
 
 export function FitnessGoals() {
   const { profile, setProfile } = useProfileStore();
@@ -18,7 +19,7 @@ export function FitnessGoals() {
   const handleSave = () => {
     setProfile({
       ...profile,
-      goal: form.goal as any,
+      goal: form.goal as FitnessGoal,
       targetWeight: Number(form.targetWeight),
     });
     setIsEditing(false);
@@ -102,7 +103,9 @@ export function FitnessGoals() {
               ].map((g) => (
                 <button
                   key={g.value}
-                  onClick={() => setForm({ ...form, goal: g.value })}
+                  onClick={() =>
+                    setForm({ ...form, goal: g.value as FitnessGoal })
+                  }
                   className={`p-2 rounded-lg border text-sm ${
                     form.goal === g.value ? "bg-black text-white" : "bg-white"
                   }`}

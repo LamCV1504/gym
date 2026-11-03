@@ -1,4 +1,6 @@
-export const exercises = [
+import type { Exercise } from "../type";
+
+export const exercises: Exercise[] = [
   {
     id: 1,
     name: "Push Up",

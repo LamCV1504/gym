@@ -30,7 +30,7 @@ export function TopActions() {
       <div className="flex items-center gap-2">
         <IconButton
           icon={<MessageCircle size={18} />}
-          color="primary"
+          // color="primary"
           active={active === "message"}
           onClick={() => setActive(active === "message" ? null : "message")}
         ></IconButton>

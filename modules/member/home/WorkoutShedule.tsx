@@ -4,9 +4,18 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, Plus } from "lucide-react";
+import { useState } from "react";
 
 /* 🔥 MOCK DATA */
-const exercises = [
+type Exercise = {
+  name: string;
+  sets: number;
+  reps: number;
+  weight: number;
+  completedSets: number;
+};
+
+const initialExercises: Exercise[] = [
   { name: "Squat", sets: 4, reps: 10, weight: 80, completedSets: 4 },
   { name: "Leg Press", sets: 3, reps: 12, weight: 120, completedSets: 3 },
   { name: "Lunges", sets: 3, reps: 10, weight: 20, completedSets: 0 },
@@ -17,6 +26,16 @@ const exercises = [
 ];
 
 export function WorkoutSchedule() {
+  const [exercises, setExercises] = useState(initialExercises);
+
+  const updateExercise = (index: number, updated: Exercise) => {
+    setExercises((current) =>
+      current.map((exercise, exerciseIndex) =>
+        exerciseIndex === index ? updated : exercise,
+      ),
+    );
+  };
+
   const doneCount = exercises.filter((e) => e.completedSets === e.sets).length;
   const progress = (doneCount / exercises.length) * 100;
 
@@ -67,14 +86,8 @@ function ExerciseItem({
   exercise,
   onUpdate,
 }: {
-  exercise: {
-    name: string;
-    sets: number;
-    reps: number;
-    weight: number;
-    completedSets: number;
-  };
-  onUpdate: (updated: any) => void;
+  exercise: Exercise;
+  onUpdate: (updated: Exercise) => void;
 }) {
   const isDone = exercise.completedSets === exercise.sets;
 
