@@ -1,6 +1,15 @@
 import { Heart, MessageCircle, Send } from "lucide-react";
 
-export function PostActions({ post, onLike }) {
+type PostActionsProps = {
+  post: {
+    id: number;
+    likes: number;
+    isLiked: boolean;
+  };
+  onLike: (postId: number) => void;
+};
+
+export function PostActions({ post, onLike }: PostActionsProps) {
   return (
     <div className="flex justify-between items-center mt-3 pt-2 border-t">
       

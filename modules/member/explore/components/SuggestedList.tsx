@@ -1,6 +1,14 @@
+import Image from "next/image";
+import { getThumbnail } from "@/lib/utils";
 import { exercises } from "../data/mockData";
+import type { Exercise } from "../type";
 
-export function SuggestedList({ current, onSelect }: any) {
+type SuggestedListProps = {
+  current: Exercise;
+  onSelect: (item: Exercise) => void;
+};
+
+export function SuggestedList({ current, onSelect }: SuggestedListProps) {
   const suggested = exercises.filter(
     (e) =>
       e.id !== current.id &&
@@ -16,7 +24,14 @@ export function SuggestedList({ current, onSelect }: any) {
           className="mb-3 cursor-pointer"
           onClick={() => onSelect(e)}
         >
-          <img src={e.thumbnail} className="w-full rounded-lg" />
+          <Image
+            src={getThumbnail(e.youtubeId)}
+            alt={e.name}
+            width={400}
+            height={225}
+            unoptimized
+            className="w-full rounded-lg"
+          />
           <p className="text-sm font-medium mt-1">{e.name}</p>
         </div>
       ))}

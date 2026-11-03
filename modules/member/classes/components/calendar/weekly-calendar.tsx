@@ -18,7 +18,7 @@ export function WeeklyCalendar() {
     <div className="grid grid-cols-7 gap-4">
 
       {days.map((day) => (
-        <div key={day} className="bg-gray-50 p-3 rounded-xl min-h-[200px]">
+        <div key={day} className="bg-gray-50 p-3 rounded-xl min-h-50">
 
           <p className="text-sm font-medium mb-2">{day}</p>
 

@@ -11,6 +11,7 @@ export default function HeroRight() {
 
   const liveClasses = [
     {
+      id: 1,
       name: "dafas",
       availableSlots: 3,
     },

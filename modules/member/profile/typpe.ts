@@ -6,9 +6,16 @@ export interface UserProfile {
   avatar: string;
   email?: string;
   phone?: string;
+  yearOfBirth?: number;
+  gender?: string;
   weight?: number;
   height?: number;
   bodyFat?: number;
+  chest?: number;
+  waist?: number;
+  hip?: number;
+  arm?: number;
+  thigh?: number;
 
   goal?: FitnessGoal;
   targetWeight?: number;

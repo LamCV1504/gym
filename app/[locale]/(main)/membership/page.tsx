@@ -7,7 +7,6 @@ import { PersonalPromotionCard } from "@/modules/member/membership/components/pr
 import { RecommendedPlans } from "@/modules/member/membership/components/recommended-plan";
 import {
   TransactionHistory,
-  UsageHistory,
 } from "@/modules/member/membership/components/transaction-history";
 import {
   mockPlans,
@@ -16,7 +15,7 @@ import {
 
 const mockMembership = {
   name: "Premium Plan",
-  status: "active",
+  status: "active" as const,
   startDate: "01/04/2026",
   endDate: "01/05/2026",
   totalSessions: 30,
@@ -35,29 +34,14 @@ const mockTransactions = [
     plan: "Premium Plan",
     amount: "$49",
     date: "01/04/2026",
-    status: "paid",
+    status: "paid" as const,
   },
   {
     id: "2",
     plan: "Pro Plan",
     amount: "$29",
     date: "01/03/2026",
-    status: "paid",
-  },
-];
-
-const mockUsage = [
-  {
-    id: "1",
-    type: "class",
-    name: "Yoga Class",
-    date: "10/04/2026",
-  },
-  {
-    id: "2",
-    type: "gym",
-    name: "Gym Check-in",
-    date: "09/04/2026",
+    status: "paid" as const,
   },
 ];
 

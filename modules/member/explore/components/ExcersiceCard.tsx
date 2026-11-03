@@ -1,7 +1,13 @@
 import { getThumbnail } from "@/lib/utils";
+import Image from "next/image";
+import type { Exercise } from "../type";
 
+type ExerciseCardProps = {
+  item: Exercise;
+  onClick: (item: Exercise) => void;
+};
 
-export function ExerciseCard({ item, onClick }) {
+export function ExerciseCard({ item, onClick }: ExerciseCardProps) {
   const getSpan = () => {
     switch (item.layout) {
       case "vertical":
@@ -19,8 +25,11 @@ export function ExerciseCard({ item, onClick }) {
       className={`relative rounded-2xl overflow-hidden cursor-pointer ${getSpan()}`}
     >
       {/* Thumbnail */}
-      <img
+      <Image
         src={getThumbnail(item.youtubeId)}
+        alt={item.name}
+        fill
+        unoptimized
         className="w-full h-full object-cover"
       />
 

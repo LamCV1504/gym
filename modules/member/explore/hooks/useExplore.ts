@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { exploreService } from "../services/explore.service";
-import { useExploreStore } from "../store/explore.store";
+import { useExploreStore } from "@/stores/explore-store";
 
 export function useExplore() {
   const {
@@ -14,7 +14,7 @@ export function useExplore() {
 
   useEffect(() => {
     exploreService.getExercises().then(setExercises);
-  }, []);
+  }, [setExercises]);
 
   const filtered = useMemo(() => {
     return exercises.filter((e) =>
